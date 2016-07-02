@@ -1,27 +1,46 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Clement-sworld by ClementChiang</title>
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <script src="//https://github.com/alvarotrigo/fullPage.js"></script>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+<!--<script src="vendors/jquery.easings.min.js"></script>-->
+
+<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+
+<script type="text/javascript" src="jquery.fullPage.js"></script>
+
+<script type"text/javascript">
+	$(document).ready(function() {
+		    $('#fullpage').fullpage({
+		    	sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke']
+		    	css3: true
+		    });
+		});
+</script>
+
+<style type="text/css">
+	.section{
+		font-size: 6em;
+		text-align: center;
+	}
+</style>
   </head>
   <body>
     
     <center><p><font face="verdana" font size="6"><em>Hello! Welcome to Clement's PEGALife</em></font></p></center>
 	    
-	    <div id="fullpage">
-	    	<div class"section">Whatever</div>
-	    	<div class"section">Whatever</div>
-	    	<div class"section">Whatever</div>
-	    </div>
+	<div id="fullpage">
+		 <div class="section">Welcome to Clement's PEGA Life</div>
+		 <div class="section">About Clement</div>
+		 	<div class="slide">Background</div>
+		 	<div class="slide">Interests</div>
+		 	<div class="slide">Hometown</div>
+		 <div class="section">Contact Me</div>
+		 <!--<div class="section">Contact Me</div>-->
+	</div>
 	    
 	    
 	    
