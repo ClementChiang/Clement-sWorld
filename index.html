@@ -17,6 +17,7 @@
 	$(document).ready(function() {
 		    $('#fullpage').fullpage({
 		    	sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke']
+		    	anchors: ['about','paper','aaaa']
 		    	css3: true
 		    });
 		});
@@ -32,12 +33,12 @@
   <body>
     
     	<div id="fullpage">
-		 <div class="section">Welcome to Clement's PEGA Life</div>
-		 <div class="section">About Clement</div>
+		 <div class="section" data-anchor="about">Welcome to Clement's PEGA Life</div>
+		 <div class="section" data-anchor="paper">About Clement</div>
 		 	<div class="slide">Background</div>
 		 	<div class="slide">Interests</div>
 		 	<div class="slide">Hometown</div>
-		 <div class="section">Contact Me</div>
+		 <div class="section" data-anchor="aaaa">Contact Me</div>
 		 <!--<div class="section">Contact Me</div>-->
 	</div>
 	    
