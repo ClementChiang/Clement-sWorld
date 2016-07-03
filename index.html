@@ -3,7 +3,8 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	
 <script src="jquery.min.js"></script>
 
 <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
@@ -16,8 +17,8 @@
 <script type"text/javascript">
 	$(document).ready(function() {
 		    $('#fullpage').fullpage({
-		    	sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke'],
-		    	anchors: ['HomPage','BackGround','ContactWithClement'],
+		    	sectionsColor: ['#4BBFC3', '#FFFFAA', '#FFFFFF', 'whitesmoke'],
+		    	anchors: ['HomPage','BackGround','Contact With Clement'],
 		    	css3: true
 		    });
 		});
@@ -28,20 +29,67 @@
 		font-size: 6em;
 		text-align: center;
 	}
+	.li{
+		position:relative; 
+		top:10px; 
+		text-align: left;
+		left: 35%;
+		 
+	}
+	.iconColor a{
+		color:#CECEFF;
+	}
 </style>
+
+
+
   </head>
   <body>
-    
+		
     	<div id="fullpage">
-		 <div class="section" data-anchor="HomPage">Welcome to Clement's PEGA Life</div>
-		 <div class="section" data-anchor="BackGround">About Clement</div>
-		 <!--	<div class="slide">Background</div>-->
-		 <!--	<div class="slide">Interests</div>-->
-		 <!--	<div class="slide">Hometown</div>-->
-		 <div class="section" data-anchor="ContactWithClement">Contact With Clement</div>
-		 <!--<div class="section">Contact Me</div>-->
+		<div class="section" data-anchor="HomPage">Welcome to Clement's Life</div>
+		
+		<div class="section" data-anchor="BackGround">About Clement
+		
+		
+			<div class="slide", style="font-size: 45px"><img src="liontest.jpg" width="20%"></img>x Interests
+				
+				<center ul>
+				<div class="li">
+				<li style="font-size: 22px">Watching NBA</li>	
+				<li style="font-size: 22px">Learn how to code</li>
+				<li style="font-size: 22px">Reading</li>
+				</ul>
+				</div>
+			</div>
+			
+			<div class="slide", style="font-size: 45px">Hometown
+			</div>
+		</div>
+		
+		<div class="section" data-anchor="Contact With Clement">Contact With Clement
+		
+				
+				<center ul>
+				
+				<div class="iconColor">
+				<a href="www.facebook.com"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+				<a href="www.facebook.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="www.facebook.com"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+				<a href="www.facebook.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
+				</div>
+				</ul>
+			
+
+			
+			
+		</div>
+			
+		
 	</div>
-	    
+	
+		
+					
     
   </body>
 </html>
