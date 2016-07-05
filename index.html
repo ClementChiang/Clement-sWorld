@@ -104,7 +104,7 @@
 					Tamsui Dist., New Taipei City 25142, Taiwan (R.O.C.)<br>
 					g333321@gmail.com<br>
 				</div>
-				<div id="showbox" onload="ShowTime()"></div>
+				<div id="showbox"></div>
 			
 		</div>
 			
@@ -132,15 +132,16 @@
 
 <script type"text/javascript">
 	$(document).ready(function() {
-		    $('#fullpage').fullpage({
-		    	sectionsColor: ['#4BBFC3', '#FFFFAA', '#FFFFFF', 'whitesmoke'],
-		    	anchors: ['HomPage','BackGround','Contact With Clement'],
-		    	css3: true
-		    });
-		});
+	    $('#fullpage').fullpage({
+	    	sectionsColor: ['#4BBFC3', '#FFFFAA', '#FFFFFF', 'whitesmoke'],
+	    	anchors: ['HomPage','BackGround','Contact With Clement'],
+	    	css3: true
+	    });
+	    ShowTime();
+	});
 	function ShowTime(){
-　	document.getElementById('showbox').innerHTML = new Date();
-　	setTimeout('ShowTime()',1000);
+　		document.getElementById('showbox').innerHTML = new Date();
+　		setTimeout('ShowTime()',1000);
 	}
 	
 </script>
