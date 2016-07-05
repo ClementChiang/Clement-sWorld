@@ -22,6 +22,11 @@
 		    	css3: true
 		    });
 		});
+	function ShowTime(){
+　	document.getElementById('showbox').innerHTML = new Date();
+　	setTimeout('ShowTime()',1000);
+	}
+	
 </script>
 
 
@@ -125,7 +130,7 @@
 					Tamsui Dist., New Taipei City 25142, Taiwan (R.O.C.)<br>
 					g333321@gmail.com<br>
 				</div>
-				
+				<div id="showbox" onload="ShowTime()"></div>
 			
 		</div>
 			
