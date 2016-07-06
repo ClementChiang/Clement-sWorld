@@ -2,15 +2,65 @@
 <html style="overflow: hidden; height: 100%;">
 <html>
   <head>
+	
+	
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	
+	<script src="jquery.min.js"></script>
 
-<style type="text/css">
+	<script type="text/javascript" src="scrolloverflow.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#FFFFFF', '#FFDCB9', '#D9FFFF', 'whitesmoke'],
+				anchors: ['HomPage','BackGround','Contact With Clement'],
+				css3: true
+			});
+		});
+		
+		function ShowTime(){
+			document.getElementById("showbox").innerHTML = new Date();
+			setTimeout("ShowTime()",1000);
+		}
+		
+		function QRCode(content, width, height){
+		// 預設寬高為 120x120
+		width = !!width ? width : 120 ;
+		height = !!height ? height : 120;
+		// 編碼
+		content = encodeURIComponent("http://www.facebook.com/ClementChiang920");
+		return 'http://chart.apis.google.com/chart?cht=qr&chl=' + content + '&chs=' + width + 'x' + height;
+		}
+ 
+		window.onload = function(){
+			document.getElementById('qrcode').onclick = function(){
+				var msg = document.getElementById("content");
+				var imgSrc = QRCode(msg.innerHTML, 300, 300);
+				msg.innerHTML = '<img src="' + imgSrc + '" alt="" />';
+				OnClientClick="this.button='disabled'";
+				
+			};
+		};
+		alert("Hello!How are you?");
+		
+	</script>
+	
+	
+	<style type="text/css">
 	.section{
 		font-size: 6em;
 		text-align: center;
 		font-family: Helvetica;
+		
+	}
+	.slide{
+		
+		font-family: Helvetica;
+		
 	}
 	.li{
 		position:relative; 
@@ -18,8 +68,20 @@
 		text-align: left;
 		left: 35%;
 		font-family: Helvetica;
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.Backgroundli{
+		position:relative; 
+		top:10px; 
+		text-align: left;
+		left: 29%;
+		font-family: Helvetica;
+		font-size: 24px;
+		line-height: 40px;
 		 
 	}
+	
 	.iconColor a #iconColor1 {
 		color:rgba(41, 148, 255,1.0);	
 	}
@@ -59,35 +121,37 @@
   <body onload="ShowTime();">
 		
     	<div id="fullpage">
-		<div class="section" data-anchor="HomPage" style="color:#ffffff">Welcome to Clement's Life</div>
+		<div class="section" data-anchor="HomPage"><i>Welcome</i> to Clement's Life<hr>
 		
-		<div class="section" data-anchor="BackGround">About Clement
+		</div>
 		
-			<div class="slide" style="font-size: 45px"><img src="liontest.jpg" width="20%"></img> x Interests
-				
+		<div class="section" data-anchor="BackGround"><i>About</i> Clement
+			
+			<div class="slide">
+			<img src="liontest.jpg" width="20%" ></img> <i>x</i> <a style="font-size: 52px">Interests</a>
 				<center ul>
 				<div class="li">
-				<p>
-				<li style="font-size: 22px">Watching NBA</li>	
-				<li style="font-size: 22px">Learn how to code</li>
-				<li style="font-size: 22px">Reading</li>
-				
-				</p>
-				
+				<li>Watching NBA</li>	
+				<li>Learn how to code</li>
+				<li>Reading</li>
 				</ul>
 				</div>
 			</div>
-			
-			<div class="slide" style="font-size: 25px">
-			
-			<iframe width="484" height="280" src="https://www.youtube.com/embed/JLfTwT4kyKs" frameborder="0" allowfullscreen></iframe>
-			<br>Take a break and listen to music!
+			<div class="slide">
+				
+				<a style="font-size: 62px">Background <i>x</i> Professional</a>
+				<div class="Backgroundli">
+				<i class="fa fa-graduation-cap" aria-hidden="true"></i>Master of Accounting, NCKU, 2015.<br>
+				<i class="fa fa-graduation-cap" aria-hidden="true"></i>Bachelor of Business Administration, NTUST, 2013.
+				
+				</div>
 			</div>
+			
 		</div>
 		
-		<div class="section" data-anchor="Contact With Clement">Contact With Clement
+		<div class="section" data-anchor="Contact With Clement" ><i>Contact</i> With Clement
 		
-				
+			<div class="slide">	
 				<center ul>
 				
 				<div class="iconColor">
@@ -98,56 +162,35 @@
 				</div>
 				</ul>
 				
-				<div class="addressType" >
-					<strong>Clement.LifeShare</strong><br>
+				<div class="addressType" style="font-size: 18px  ;line-height: 28px">
+					<a style="font-size: 38px"><strong>Clement.<i>LifeShare</i></strong></a><br>
 					No.4, Aly. 1, Ln. 51, Xuefu Rd.<br>
 					Tamsui Dist., New Taipei City 25142, Taiwan (R.O.C.)<br>
 					g333321@gmail.com<br>
 				</div>
-				<p><div id="showbox" style="font-size: 12px"></div></p>
+				<br>
+				<div id="showbox" style="font-size: 12px"></div>
+			
+			</div>
+			
+			<div class="slide">
+			
+			
+			<div id="content">
+			<input style="font-size: 36px ;font-family: Helvetica" type="button" value="Click button and find our QRCode out" id="qrcode" />
+			</div>
+			
+			</div>
+			
+		
 			
 		</div>
 			
-		
-  
-
-  </ul>
-				
-				  
+	  
 
 				
-</div>
-		
-	
-	
-	
-<script src="jquery.min.js"></script>
-
-<!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-<!--<script src="jquery.easings.min.js"></script>-->
-
-<script type="text/javascript" src="scrolloverflow.min.js"></script>
-
-<script type="text/javascript" src="jquery.fullPage.js"></script>
-
-<script type"text/javascript">
-	$(document).ready(function() {
-	    $('#fullpage').fullpage({
-	    	sectionsColor: ['#4BBFC3', '#FFFFAA', '#FFFFFF', 'whitesmoke'],
-	    	anchors: ['HomPage','BackGround','Contact With Clement'],
-	    	css3: true
-	    });
-	});
-	function ShowTime(){
-　		document.getElementById('showbox').innerHTML = new Date();
-　		setTimeout('ShowTime()',1000);
-　		
-	}
-	
-</script>
-
-
-	
+		</div>
+			
 					
     
   </body>
