@@ -21,13 +21,13 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				sectionsColor: ['#FFFFFF', '#FFDCB9', '#1bbc9b', '#FFFF93', '#D9FFFF', 'whitesmoke'],
-				anchors: ['HomPage','Background','News','Others','Contact'],
+				anchors: ['HomPage','Background','Photos','Others','Contact'],
 				css3: true,
 				navigation: true,
 				slidesNavigation: true,
 				menu: '#menu',
 				navigationPosition: 'right',
-				navigationTooltips: ['HomPage','Background','News','Others','Contact'],
+				navigationTooltips: ['HomPage','Background','Photos','Others','Contact'],
 				scrollingSpeed: 1300
 			});
 		});
@@ -76,6 +76,7 @@
 			font-family: Helvetica;
 			background-image: url("photo/SF.jpg");
 			background-size: cover;
+			color:rgba(255, 255, 255,0.6);
 	}
 	.section.section2{
 			font-size: 5em;
@@ -83,6 +84,7 @@
 			font-family: Helvetica;
 			background-image: url("photo/RG.jpg");
 			background-size: cover;
+			color:rgba(255, 255, 255,0.6);
 	}
 	.section.section3{
 			font-size: 5em;
@@ -90,6 +92,7 @@
 			font-family: Helvetica;
 			background-image: url("photo/MT.jpg");
 			background-size: cover;
+			color:rgba(255, 255, 255,0.6);
 	}
 	.section.section4{
 			font-size: 5em;
@@ -97,6 +100,7 @@
 			font-family: Helvetica;
 			background-image: url("photo/LT.jpg");
 			background-size: cover;
+			color:rgba(255, 255, 255,0.6);
 	}
 	.section.section5{
 			font-size: 5em;
@@ -104,6 +108,7 @@
 			font-family: Helvetica;
 			background-image: url("photo/LC.jpg");
 			background-size: cover;
+			color:rgba(255, 255, 255,0.6);
 	}
 	.slide{
 		
@@ -210,11 +215,11 @@
   </head>
   <body onload="ShowTime();">
 		<center><ul id="menu">
-			<li ><a href="#HomPage">HomPage</a></li>
-			<li ><a href="#Background">Background</a></li>
-			<li ><a href="#News">News</a></li>
-			<li ><a href="#Others">Others</a></li>
-			<li ><a href="#Contact">Contact</a></li>
+			<li style="font-size: 18px"><a href="#HomPage">Hompage</a></li>
+			<li style="font-size: 18px"><a href="#Background">Background</a></li>
+			<li style="font-size: 18px"><a href="#Photos">Photos</a></li>
+			<li style="font-size: 18px"><a href="#Others">Others</a></li>
+			<li style="font-size: 18px"><a href="#Contact">Contact</a></li>
 		</ul></center>
 		
     	<div id="fullpage">
@@ -247,20 +252,16 @@
 			
 		</div>
 					
-		<div class="section section3" data-anchor="News" ><i>News</i> With Clement
+		<div class="section section3" data-anchor="Photos" ><br><i>Photos</i> With Clement
 		
 			
 			<!-- Slideshow -->
 			<center>
 			
-			<div class="bx-viewport" style="width: 40%;padding-right:30px; overflow: hidden; position: relative">
+			<div class="bx-viewport" style="width: 50%;padding-right:30px; overflow: hidden; position: relative">
 			<ul class="slideshow">
-			<li><img src="photo/photo1.jpg" /></li>
-			<li><img src="photo/photo2.jpg" /></li>
-			<li><img src="photo/photo3.jpg" /></li>
-			<li><img src="photo/photo3.jpg" /></li>
-			<li><img src="photo/photo3.jpg" /></li>
-			<li><img src="photo/photo3.jpg" /></li>
+			<li><img src="photo/photo1.jpg" width="500" height="362"/></li>
+			<li><img src="photo/photo2.jpg" width="500" height="362"/></li>
 			</ul>
 			</div>
 			
@@ -271,22 +272,32 @@
 		
 			
 			<div class="grid" style="font-size: 12px">
-			<div class="col_4" style="border:3px #FFD382 groove">
+			<div class="col_4" style="border:3px #FFD382 groove;  background-color:#ffffff; color: #000000">
 			<!-- Align Left -->
 			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
 			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
 			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
 			in hendrerit in vulputate velit esse molestie consequat.</p>
-			
 			</div>
-			<div class="col_4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
-			nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
 			
-			<div class="col_4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
-			nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
-				
+			<div class="col_4" style="border:3px #FFD382 groove;  background-color:#ffffff; color: #000000">
+			<!-- Align Left -->
+			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
+			in hendrerit in vulputate velit esse molestie consequat.</p>
+			</div>
 			
+			<div class="col_4" style="border:3px #FFD382 groove;  background-color:#ffffff; color: #000000">
+			<!-- Align Left -->
+			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
+			in hendrerit in vulputate velit esse molestie consequat.</p>
+			</div>
 			
 			</div>
 		
