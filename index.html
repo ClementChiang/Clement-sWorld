@@ -21,13 +21,13 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				sectionsColor: ['#FFFFFF', '#FFDCB9', '#1bbc9b', '#FFFF93', '#D9FFFF', 'whitesmoke'],
-				anchors: ['HomPage','Background','Photos','Others','Contact'],
+				anchors: ['Homgage','Background','Photos','Others','Contact'],
 				css3: true,
 				navigation: true,
 				slidesNavigation: true,
 				menu: '#menu',
 				navigationPosition: 'right',
-				navigationTooltips: ['HomPage','Background','Photos','Others','Contact'],
+				navigationTooltips: ['Homgage','Background','Photos','Others','Contact'],
 				scrollingSpeed: 1300
 			});
 		});
@@ -38,9 +38,9 @@
 		}
 		
 		function QRCode(content, width, height){
-		// 預設寬高為 120x120
-		width = !!width ? width : 120 ;
-		height = !!height ? height : 120;
+		// 預設寬高為 60x60
+		width = !!width ? width : 60 ;
+		height = !!height ? height : 60;
 		// 編碼
 		content = encodeURIComponent("http://www.facebook.com/ClementChiang920");
 		return 'http://chart.apis.google.com/chart?cht=qr&chl=' + content + '&chs=' + width + 'x' + height;
@@ -57,7 +57,7 @@
 			document.getElementById('qrcode').onclick = function(){
 				warningQRCode();
 				var msg = document.getElementById("content");
-				var imgSrc = QRCode(msg.innerHTML, 300, 300);
+				var imgSrc = QRCode(msg.innerHTML, 120, 120);
 				msg.innerHTML = '<img src="' + imgSrc + '" alt="" />';
 				OnClientClick="this.button='disabled'";
 			};
@@ -143,16 +143,16 @@
 		color:rgba(41, 148, 255,0.5);
 	}
 	.iconColor a #iconColor2 {
-		color:rgba(255, 129, 66,1.0);	
+		color:rgba(255, 153, 153,1.0);	
 	}
 	.iconColor a:hover #iconColor2{
-		color:rgba(255, 129, 66,0.5);
+		color:rgba(255, 153, 153,0.5);
 	}
 	.iconColor a #iconColor3 {
-		color:rgba(167, 255, 36,1.0);	
+		color:rgba(122, 169, 189,1.0);	
 	}
 	.iconColor a:hover #iconColor3{
-		color:rgba(167, 255, 36,0.5);
+		color:rgba(122, 169, 189,0.5);
 	}
 	.iconColor a #iconColor4 {
 		color:rgba(201, 141, 193,1.0);	
@@ -215,7 +215,7 @@
   </head>
   <body onload="ShowTime();">
 		<center><ul id="menu">
-			<li style="font-size: 18px"><a href="#HomPage">Hompage</a></li>
+			<li style="font-size: 18px"><a href="#Homgage">Homepage</a></li>
 			<li style="font-size: 18px"><a href="#Background">Background</a></li>
 			<li style="font-size: 18px"><a href="#Photos">Photos</a></li>
 			<li style="font-size: 18px"><a href="#Others">Others</a></li>
@@ -231,9 +231,9 @@
 			
 			<div class="slide">
 			<i>About</i> Clement<br>
-			<img src="photo/liontest.jpg" width="20%" ></img> <i>x</i> <a style="font-size: 52px; color:#ffffff">Interests</a>
+			<img src="photo/liontest.jpg" width="20%" ></img><i style="color:rgba(255, 255, 255,0.8)"> x </i><a style="font-size: 52px; color:rgba(255, 255, 255,0.8)">Interests</a>
 				<center ul>
-				<div class="li" ; style="color:#ffffff">
+				<div class="li" ; style="color:rgba(255, 255, 255,0.6)">
 				<li>Watching NBA</li>	
 				<li>Learn how to code</li>
 				<li>Reading</li>
@@ -242,10 +242,10 @@
 			</div>
 			<div class="slide">
 				
-				<a style="font-size: 62px ;color:#ffffff">Background <i>x</i> Professional</a>
+				<i style="font-size: 62px ;color:rgba(255, 255, 255,0.8)">Background x Professional</i>
 				<div class="Backgroundli">
-				<i class="fa fa-graduation-cap" aria-hidden="true"></i>Master of Accounting, NCKU, 2015.<br>
-				<i class="fa fa-graduation-cap" aria-hidden="true"></i>Bachelor of Business Administration, NTUST, 2013.
+				<a class="fa fa-graduation-cap" aria-hidden="true"></a> Master of Accounting, NCKU, 2015.<br>
+				<a class="fa fa-graduation-cap" aria-hidden="true"></a> Bachelor of Business Administration, NTUST, 2013.
 				
 				</div>
 			</div>
@@ -258,7 +258,7 @@
 			<!-- Slideshow -->
 			<center>
 			
-			<div class="bx-viewport" style="width: 50%;padding-right:30px; overflow: hidden; position: relative">
+			<div class="bx-viewport" style="width: 45%;padding-right:30px; overflow: hidden; position: relative">
 			<ul class="slideshow">
 			<li><img src="photo/photo1.jpg" width="500" height="362"/></li>
 			<li><img src="photo/photo2.jpg" width="500" height="362"/></li>
@@ -273,8 +273,8 @@
 			
 			<div class="grid" style="font-size: 12px">
 			<div class="col_4" style="border:3px #FFD382 groove;  background-color:#ffffff; color: #000000">
-			<!-- Align Left -->
-			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
+			<!-- Align right -->
+			<img class="align-right" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
 			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
 			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
@@ -282,8 +282,8 @@
 			</div>
 			
 			<div class="col_4" style="border:3px #FFD382 groove;  background-color:#ffffff; color: #000000">
-			<!-- Align Left -->
-			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
+			<!-- Align right -->
+			<img class="align-right" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
 			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
 			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
@@ -291,8 +291,8 @@
 			</div>
 			
 			<div class="col_4" style="border:3px #FFD382 groove;  background-color:#ffffff; color: #000000">
-			<!-- Align Left -->
-			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
+			<!-- Align right -->
+			<img class="align-right" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
 			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
 			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
@@ -318,26 +318,21 @@
 				</ul>
 				
 				<div class="addressType" style="font-size: 18px  ;line-height: 28px">
-					<a style="font-size: 38px"><strong>Clement.<i>LifeShare</i></strong></a><br>
-					
+					<a style="font-size: 38px"><i style="color:rgba(255, 255, 255,0.8)">Clement.LifeShare</i></a><br>
+					<i style="color:rgba(255, 255, 255,0.6)">
 					No.4, Aly. 1, Ln. 51, Xuefu Rd.<br>
 					Tamsui Dist., New Taipei City 25142, Taiwan (R.O.C.)<br>
 					g333321@gmail.com<br>
-					
+					</i>
 				</div>
-				<br>
-				<div id="showbox" style="font-size: 14px; font-family: Helvetica; color: #ffffff"></div>
+				
+				<div id="content">
+				<input style="font-size: 22px ;font-family: Helvetica" type="button" button class="large" value="Click button and find our QRCode out" id="qrcode" />
+				</div>
+				<div id="showbox" style="font-size: 16px; font-family: Helvetica; color: rgba(255, 255, 255,0.8)"></div>
 			
 			</div>
-			
-			<div class="slide">
-			
-			
-				<div id="content">
-				<input style="font-size: 36px ;font-family: Helvetica" type="button" button class="medium blue" value="Click button and find our QRCode out" id="qrcode" />
-				</div>
-			
-			</div>		
+					
 			
 		</div>
   </body>
