@@ -1,11 +1,15 @@
 <!doctype html>
-<html style="overflow: hidden; height: 100%;">
+<html style="auto: hidden; height: 100%;">
 <html>
   <head>
-	
-	
+		
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="kcss/kickstart.css" media="all" /> <!-- KICKSTART -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	
+	<script src="kjs/kickstart.js"></script> <!-- KICKSTART -->
 	
 	<script src="jquery.min.js"></script>
 
@@ -16,8 +20,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#FFFFFF', '#FFDCB9', '#D9FFFF', 'whitesmoke'],
-				anchors: ['HomPage','BackGround','Contact With Clement'],
+				sectionsColor: ['#FFFFFF', '#FFDCB9', '#D9FFFF', '#D3FF93', '#FFFF93', 'whitesmoke'],
+				anchors: ['HomPage','BackGround','Contact With Clement','News','Others'],
 				css3: true
 			});
 		});
@@ -35,24 +39,31 @@
 		content = encodeURIComponent("http://www.facebook.com/ClementChiang920");
 		return 'http://chart.apis.google.com/chart?cht=qr&chl=' + content + '&chs=' + width + 'x' + height;
 		}
- 
+		
+		function warningQRCode(){
+			alert("Please scan this QRCode below !" + "\n" + "Thanks for your cooperation.");
+		}
+		
 		window.onload = function(){
+		
 			document.getElementById('qrcode').onclick = function(){
+				warningQRCode();
 				var msg = document.getElementById("content");
 				var imgSrc = QRCode(msg.innerHTML, 300, 300);
 				msg.innerHTML = '<img src="' + imgSrc + '" alt="" />';
 				OnClientClick="this.button='disabled'";
-				
 			};
 		};
-		alert("Hello!How are you?");
+		
+		
+		
 		
 	</script>
 	
 	
 	<style type="text/css">
 	.section{
-		font-size: 6em;
+		font-size: 5em;
 		text-align: center;
 		font-family: Helvetica;
 		
@@ -176,22 +187,54 @@
 			<div class="slide">
 			
 			
-			<div id="content">
-			<input style="font-size: 36px ;font-family: Helvetica" type="button" value="Click button and find our QRCode out" id="qrcode" />
-			</div>
+				<div id="content">
+				<input style="font-size: 36px ;font-family: Helvetica" type="button" button class="medium blue" value="Click button and find our QRCode out" id="qrcode" />
+				</div>
 			
-			</div>
+			</div>		
 			
+		</div>
+				
+		<div class="section" data-anchor="News" ><i>News</i> With Clement
 		
 			
-		</div>
+			<!-- Slideshow -->
+			<center>
 			
-	  
-
+			<div class="bx-viewport" style="width: 40%;padding-right:30px; overflow: hidden; position: relative">
+			<ul class="slideshow">
+			<li><img src="photo1.jpg" /></li>
+			<li><img src="photo2.jpg" /></li>
+			<li><img src="photo3.jpg" /></li>
+			</ul>
+			</div>
+			
+			</center>
+		</div>
+		
+		<div class="section" data-anchor="Others" ><i>Others</i> With Clement
+		
+			
+			<div class="grid" style="font-size: 12px">
+			<div class="col_4" style="border:3px #FFD382 groove">
+			<!-- Align Left -->
+			<img class="align-left" src="http://placehold.it/100x100/4D99E0/ffffff.png&text=100x100" width="100" height="100" />
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+			ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+			ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
+			in hendrerit in vulputate velit esse molestie consequat.</p>
+			
+			</div>
+			<div class="col_4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+			nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+			<div class="col_4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+			nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
 				
-		</div>
 			
-					
-    
+			
+		</div>
+		
+		</div>
+
   </body>
 </html>
