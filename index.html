@@ -21,14 +21,14 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				sectionsColor: ['#FFFFFF', '#FFDCB9', '#D3FF93', '#FFFF93', '#D9FFFF', 'whitesmoke'],
-				anchors: ['HomPage','BackGround','News','Others','Contact With Clement'],
+				anchors: ['HomPage','BackGround','News','Others','Contact'],
 				css3: true,
 				navigation: true,
 				slidesNavigation: true,
 				menu: '#menu',
 				navigationPosition: 'right',
-				navigationTooltips: ['HomPage','BackGround','News','Others','Contact With Clement'],
-				scrollingSpeed: 1000
+				navigationTooltips: ['HomPage','BackGround','News','Others','Contact'],
+				scrollingSpeed: 1300
 			});
 		});
 		
@@ -181,11 +181,11 @@
   </head>
   <body onload="ShowTime();">
 		<ul id="menu">
-			<li data-menuanchor="firstPage"><a href="#firstPage">HomPage</a></li>
-			<li data-menuanchor="secondPage"><a href="#secondPage">BackGround</a></li>
-			<li data-menuanchor="3rdPage"><a href="#3rdPage">News</a></li>
-			<li data-menuanchor="4thpage"><a href="#4thpage">Others</a></li>
-			<li data-menuanchor="5thpage"><a href="#5thpage">Contact With Clement</a></li>
+			<li ><a href="#HomPage">HomPage</a></li>
+			<li ><a href="#BackGround">BackGround</a></li>
+			<li ><a href="#News">News</a></li>
+			<li ><a href="#Others">Others</a></li>
+			<li ><a href="#Contact">Contact</a></li>
 		</ul>
 		
     	<div id="fullpage">
@@ -263,9 +263,10 @@
 		
 		</div>
 		
-		<div class="section" data-anchor="Contact With Clement" ><i>Contact</i> With Clement
+		<div class="section" data-anchor="Contact" >
 		
-			<div class="slide">	
+			<div class="slide">
+				<center><i>Contact</i> With Clement	</center>	
 				<center ul>
 				
 				<div class="iconColor">
