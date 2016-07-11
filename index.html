@@ -20,14 +20,14 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#FFFFFF', '#FFDCB9', '#D3FF93', '#FFFF93', '#D9FFFF', 'whitesmoke'],
-				anchors: ['HomPage','BackGround','News','Others','Contact'],
+				sectionsColor: ['#FFFFFF', '#FFDCB9', '#1bbc9b', '#FFFF93', '#D9FFFF', 'whitesmoke'],
+				anchors: ['HomPage','Background','News','Others','Contact'],
 				css3: true,
 				navigation: true,
 				slidesNavigation: true,
 				menu: '#menu',
 				navigationPosition: 'right',
-				navigationTooltips: ['HomPage','BackGround','News','Others','Contact'],
+				navigationTooltips: ['HomPage','Background','News','Others','Contact'],
 				scrollingSpeed: 1300
 			});
 		});
@@ -70,11 +70,40 @@
 	
 	
 	<style type="text/css">
-	.section{
-		font-size: 5em;
-		text-align: center;
-		font-family: Helvetica;
-		
+	.section.section1{
+			font-size: 5em;
+			text-align: center;
+			font-family: Helvetica;
+			background-image: url("photo/SF.jpg");
+			background-size: cover;
+	}
+	.section.section2{
+			font-size: 5em;
+			text-align: center;
+			font-family: Helvetica;
+			background-image: url("photo/RG.jpg");
+			background-size: cover;
+	}
+	.section.section3{
+			font-size: 5em;
+			text-align: center;
+			font-family: Helvetica;
+			background-image: url("photo/MT.jpg");
+			background-size: cover;
+	}
+	.section.section4{
+			font-size: 5em;
+			text-align: center;
+			font-family: Helvetica;
+			background-image: url("photo/LT.jpg");
+			background-size: cover;
+	}
+	.section.section5{
+			font-size: 5em;
+			text-align: center;
+			font-family: Helvetica;
+			background-image: url("photo/LC.jpg");
+			background-size: cover;
 	}
 	.slide{
 		
@@ -129,7 +158,7 @@
 	.addressType {
 		font-size: 16px;
 		font-family: Helvetica;
-		  
+		color: #ffffff;
 	}
 	#menu li {
 	display:inline-block;
@@ -182,24 +211,24 @@
   <body onload="ShowTime();">
 		<ul id="menu">
 			<li ><a href="#HomPage">HomPage</a></li>
-			<li ><a href="#BackGround">BackGround</a></li>
+			<li ><a href="#BackGround">Background</a></li>
 			<li ><a href="#News">News</a></li>
 			<li ><a href="#Others">Others</a></li>
 			<li ><a href="#Contact">Contact</a></li>
 		</ul>
 		
     	<div id="fullpage">
-		<div class="section" data-anchor="HomPage"><i>Welcome</i> to Clement's Life<hr>
+		<div class="section section1" data-anchor="HomPage"><i>Welcome</i> to Clement's Life<hr>
 		
 		</div>
 		
-		<div class="section" data-anchor="BackGround">
+		<div class="section section2" data-anchor="Background">
 			
 			<div class="slide">
 			<i>About</i> Clement<br>
 			<img src="photo/liontest.jpg" width="20%" ></img> <i>x</i> <a style="font-size: 52px; color:#ffffff">Interests</a>
 				<center ul>
-				<div class="li">
+				<div class="li" ; style="color:#ffffff">
 				<li>Watching NBA</li>	
 				<li>Learn how to code</li>
 				<li>Reading</li>
@@ -218,7 +247,7 @@
 			
 		</div>
 					
-		<div class="section" data-anchor="News" ><i>News</i> With Clement
+		<div class="section section3" data-anchor="News" ><i>News</i> With Clement
 		
 			
 			<!-- Slideshow -->
@@ -238,7 +267,7 @@
 			</center>
 		</div>
 		
-		<div class="section" data-anchor="Others" ><i>Others</i> With Clement
+		<div class="section section4" data-anchor="Others" ><i>Others</i> With Clement
 		
 			
 			<div class="grid" style="font-size: 12px">
@@ -263,7 +292,7 @@
 		
 		</div>
 		
-		<div class="section" data-anchor="Contact" >
+		<div class="section section5" data-anchor="Contact" >
 		
 			<div class="slide">
 				<center><i>Contact</i> With Clement	</center>	
@@ -279,9 +308,11 @@
 				
 				<div class="addressType" style="font-size: 18px  ;line-height: 28px">
 					<a style="font-size: 38px"><strong>Clement.<i>LifeShare</i></strong></a><br>
+					
 					No.4, Aly. 1, Ln. 51, Xuefu Rd.<br>
 					Tamsui Dist., New Taipei City 25142, Taiwan (R.O.C.)<br>
 					g333321@gmail.com<br>
+					
 				</div>
 				<br>
 				<div id="showbox" style="font-size: 12px"></div>
